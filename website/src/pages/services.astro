@@ -1,0 +1,416 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Services" description="Explore 1:1 coaching packages: 4, 8, and 12-week options to help Christian women live with purpose, clarity, and confidence.">
+  <Header />
+
+  <!-- ===== Page Hero ===== -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="/images/botanical-texture.jpg" alt="" aria-hidden="true" />
+      <div class="page-hero__overlay"></div>
+    </div>
+    <div class="container page-hero__content text-center">
+      <span class="eyebrow animate-in" style="color: var(--color-cream-light);">Services</span>
+      <h1 class="animate-in animate-in--delay-1" style="color: var(--color-warm-white);">How We Work Together</h1>
+    </div>
+  </section>
+
+  <!-- ===== Services Overview ===== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="grid-2">
+        <div data-animate="slide-left">
+          <span class="eyebrow">1:1 Coaching</span>
+          <h2>Personal coaching tailored to <span class="serif-italic">your season</span></h2>
+          <div class="divider"></div>
+          <p>
+            My 1:1 coaching is designed to meet you exactly where you are. Whether you're navigating a major life transition, seeking clarity on your calling, or working to align your daily life with your deepest values, we'll partner together.
+          </p>
+          <p>
+            Coaching sessions are 50 minutes and we do them virtually, so no matter where you are, we can connect.
+          </p>
+          <p>
+            Before we work together, you will sign a coaching agreement and complete an intake form. This sets us on a solid path to get to do the work of coaching together.
+          </p>
+        </div>
+        <div data-animate="slide-right">
+          <div class="card how-card">
+            <h3 style="margin-bottom: var(--space-md);">How does it work?</h3>
+            <div class="how-step">
+              <div class="how-step__num">1</div>
+              <div>
+                <strong>Schedule a Discovery Call</strong>
+                <p>A free 30-minute call to discuss what you desire out of coaching and where you're at.</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step__num">2</div>
+              <div>
+                <strong>Choose Your Package</strong>
+                <p>Together we determine which coaching package best fits your goals and availability.</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step__num">3</div>
+              <div>
+                <strong>Onboarding</strong>
+                <p>Sign your coaching agreement and complete an intake form.</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step__num">4</div>
+              <div>
+                <strong>Begin Coaching</strong>
+                <p>50-minute virtual sessions, weekly or biweekly, walking your path forward together.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pricing ===== -->
+  <section class="section section--cream" id="pricing">
+    <div class="container text-center">
+      <span class="eyebrow" data-animate>Packages & Pricing</span>
+      <h2 data-animate>Choose your <span class="serif-italic">path forward</span></h2>
+      <div class="divider divider--center" data-animate></div>
+      <p class="lead" style="margin: 0 auto var(--space-xl);" data-animate>
+        Each package offers the flexibility of weekly or biweekly sessions to match your schedule and goals.
+      </p>
+
+      <div class="pricing-grid">
+        <!-- Sprint -->
+        <div class="pricing-card card" data-animate>
+          <div class="pricing-card__badge">Sprint</div>
+          <h3 class="pricing-card__name">4-Week Package</h3>
+          <div class="pricing-card__price" style="visibility: hidden; height: 0; margin: 0;"></div>
+          <div class="divider divider--center"></div>
+          <ul class="pricing-card__features">
+            <li>
+              <span class="pricing-card__feature-label">Weekly</span>
+              <span class="pricing-card__feature-value">4 sessions</span>
+            </li>
+            <li>
+              <span class="pricing-card__feature-label">Biweekly</span>
+              <span class="pricing-card__feature-value">2 sessions</span>
+            </li>
+            <li>50-minute virtual sessions</li>
+            <li>Coaching agreement & intake form</li>
+            <li>Email support between sessions</li>
+          </ul>
+          <a href="/contact" class="btn btn--outline">Get Started</a>
+        </div>
+
+        <!-- Momentum: Featured -->
+        <div class="pricing-card pricing-card--featured card" data-animate>
+          <div class="pricing-card__popular">Most Popular</div>
+          <div class="pricing-card__badge">Momentum</div>
+          <h3 class="pricing-card__name">8-Week Package</h3>
+          <div class="pricing-card__price" style="visibility: hidden; height: 0; margin: 0;"></div>
+          <div class="divider divider--center"></div>
+          <ul class="pricing-card__features">
+            <li>
+              <span class="pricing-card__feature-label">Weekly</span>
+              <span class="pricing-card__feature-value">8 sessions</span>
+            </li>
+            <li>
+              <span class="pricing-card__feature-label">Biweekly</span>
+              <span class="pricing-card__feature-value">4 sessions</span>
+            </li>
+            <li>50-minute virtual sessions</li>
+            <li>Coaching agreement & intake form</li>
+            <li>Email support between sessions</li>
+            <li>Mid-point check-in & recalibration</li>
+          </ul>
+          <a href="/contact" class="btn btn--primary">Get Started</a>
+        </div>
+
+        <!-- Deep Dive -->
+        <div class="pricing-card card" data-animate>
+          <div class="pricing-card__badge">Deep Dive</div>
+          <h3 class="pricing-card__name">12-Week Package</h3>
+          <div class="pricing-card__price" style="visibility: hidden; height: 0; margin: 0;"></div>
+          <div class="divider divider--center"></div>
+          <ul class="pricing-card__features">
+            <li>
+              <span class="pricing-card__feature-label">Weekly</span>
+              <span class="pricing-card__feature-value">12 sessions</span>
+            </li>
+            <li>
+              <span class="pricing-card__feature-label">Biweekly</span>
+              <span class="pricing-card__feature-value">6 sessions</span>
+            </li>
+            <li>50-minute virtual sessions</li>
+            <li>Coaching agreement & intake form</li>
+            <li>Email support between sessions</li>
+            <li>Comprehensive progress reviews</li>
+          </ul>
+          <a href="/contact" class="btn btn--outline">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Discovery Call ===== -->
+  <section class="section section--white" id="discovery">
+    <div class="container">
+      <div class="discovery" data-animate>
+        <div class="discovery__content">
+          <span class="eyebrow">Start Here</span>
+          <h2>Free Discovery Call</h2>
+          <div class="divider"></div>
+          <p>
+            A great starting point is to schedule a free 30-minute discovery call with me. We will discuss what you desire out of coaching, where you are at, and what you are navigating.
+          </p>
+          <p>
+            You can ask me any questions you have about myself or the coaching process. We then discuss which coaching package makes the most sense for you and your goals.
+          </p>
+          <p>
+            Your own availability plus the nature of what you are pursuing coaching for generally determines how long of a package you choose and whether you want coaching weekly or biweekly.
+          </p>
+          <a href="/contact" class="btn btn--primary" style="margin-top: var(--space-md);">Schedule Your Free Call</a>
+        </div>
+        <div class="discovery__visual">
+          <div class="img-frame">
+            <img src="/images/mountains-portrait.jpg" alt="Rachel Connell sitting outside with mountains in the background" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Group Coaching ===== -->
+  <section class="section--sage section--sm">
+    <div class="container text-center" data-animate style="padding: var(--space-xl) 0;">
+      <span class="eyebrow" style="color: var(--color-cream-light);">Coming Soon</span>
+      <h2>Group Coaching for <span class="serif-italic">College Women</span></h2>
+      <p style="margin: var(--space-sm) auto var(--space-md); color: rgba(255,253,249,0.8); max-width: 600px;">
+        A specialized program set on a cadence for college women navigating the complexities of launching into adulthood with faith and confidence.
+      </p>
+      <a href="/contact" class="btn btn--white">Join the Waitlist</a>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* ===== Page Hero ===== */
+  .page-hero {
+    position: relative;
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-xl);
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .page-hero__bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .page-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .page-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(142, 85, 48, 0.85), rgba(107, 125, 94, 0.8));
+  }
+
+  .page-hero__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== How Card ===== */
+  .how-card {
+    background: var(--color-cream);
+    border: none;
+    padding: var(--space-xl);
+  }
+
+  .how-step {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+  }
+
+  .how-step:last-child {
+    margin-bottom: 0;
+  }
+
+  .how-step__num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-terracotta);
+    color: var(--color-warm-white);
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .how-step p {
+    margin: 0.25rem 0 0;
+    font-size: 0.92rem;
+    color: var(--color-text-light);
+  }
+
+  /* ===== Pricing ===== */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    align-items: start;
+  }
+
+  .pricing-card {
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+    position: relative;
+  }
+
+  .pricing-card--featured {
+    background: var(--color-warm-white);
+    border: 2px solid var(--color-terracotta);
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(176, 106, 59, 0.12);
+  }
+
+  .pricing-card--featured:hover {
+    transform: scale(1.05) translateY(-4px);
+  }
+
+  .pricing-card__popular {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-terracotta);
+    color: var(--color-warm-white);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.4rem 1.2rem;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+  }
+
+  .pricing-card__badge {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-sage);
+    margin-bottom: var(--space-xs);
+  }
+
+  .pricing-card__name {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .pricing-card__price {
+    margin-bottom: var(--space-sm);
+  }
+
+  .pricing-card__amount {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--color-terracotta);
+    line-height: 1;
+  }
+
+  .pricing-card__per {
+    font-size: 0.9rem;
+    color: var(--color-text-lighter);
+  }
+
+  .pricing-card__features {
+    text-align: left;
+    margin: var(--space-md) 0 var(--space-lg);
+  }
+
+  .pricing-card__features li {
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(176, 106, 59, 0.06);
+    font-size: 0.92rem;
+    color: var(--color-text-light);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .pricing-card__feature-label {
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  .pricing-card__feature-value {
+    color: var(--color-terracotta);
+    font-weight: 400;
+  }
+
+  /* ===== Discovery ===== */
+  .discovery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .discovery__visual .img-frame {
+    max-width: 480px;
+  }
+
+  @media (max-width: 1024px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pricing-card--featured {
+      transform: none;
+    }
+
+    .pricing-card--featured:hover {
+      transform: translateY(-4px);
+    }
+
+    .discovery {
+      grid-template-columns: 1fr;
+    }
+
+    .discovery__visual {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-hero {
+      min-height: 240px;
+    }
+  }
+</style>

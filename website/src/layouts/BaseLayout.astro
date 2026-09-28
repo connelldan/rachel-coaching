@@ -1,0 +1,67 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Rachel Connell Coaching | Know your purpose. Live intentionally. Don't merely exist."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="author" content="Rachel Connell" />
+  
+  <!-- Open Graph / Social Media Preview -->
+  <meta property="og:title" content={`${title} | Rachel Connell Coaching`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.rachelconnellcoaching.com/" />
+  <!-- Using the logo.jpeg since iMessage/socials require JPG/PNG for the preview image -->
+  <meta property="og:image" content="https://www.rachelconnellcoaching.com/images/logo.jpeg" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title} | Rachel Connell Coaching</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PX521G4N63"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PX521G4N63');
+  </script>
+</head>
+<body>
+  <slot />
+
+  <script>
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('[data-animate]').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

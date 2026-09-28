@@ -1,0 +1,458 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Contact" description="Schedule a free 30-minute discovery call with Rachel Connell. Let's explore how coaching can support you on your journey.">
+  <Header />
+
+  <!-- ===== Page Hero ===== -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="/images/botanical-texture.jpg" alt="" aria-hidden="true" />
+      <div class="page-hero__overlay"></div>
+    </div>
+    <div class="container page-hero__content text-center">
+      <span class="eyebrow animate-in" style="color: var(--color-cream-light);">Contact</span>
+      <h1 class="animate-in animate-in--delay-1" style="color: var(--color-warm-white);">Let's Connect</h1>
+      <p class="animate-in animate-in--delay-2" style="color: rgba(255,253,249,0.8); margin: var(--space-sm) auto 0; max-width: 500px;">
+        I'd love to hear from you. Fill out the form below and I'll be in touch soon.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Contact Form Section ===== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form-wrapper" data-animate="slide-left">
+          <h2>Get in Touch</h2>
+          <p class="lead">Whether you're ready to book a discovery call or just have questions, I'd love to hear from you.</p>
+          <div class="divider"></div>
+
+          <form class="contact-form" id="contact-form" action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name" class="form-label">First Name <span class="required">*</span></label>
+                <input type="text" id="first-name" name="firstName" class="form-input" required placeholder="Your first name" />
+              </div>
+              <div class="form-group">
+                <label for="last-name" class="form-label">Last Name <span class="required">*</span></label>
+                <input type="text" id="last-name" name="lastName" class="form-input" required placeholder="Your last name" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" required placeholder="you@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 123-4567" />
+            </div>
+
+            <div class="form-group">
+              <label for="interest" class="form-label">What are you interested in? <span class="required">*</span></label>
+              <select id="interest" name="interest" class="form-input form-select" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="discovery-call">Free Discovery Call</option>
+                <option value="4-week">4-Week Sprint Package</option>
+                <option value="8-week">8-Week Momentum Package</option>
+                <option value="12-week">12-Week Deep Dive Package</option>
+                <option value="group-coaching">Group Coaching (Waitlist)</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="season" class="form-label">Tell me a bit about what brought you here? <span class="required">*</span></label>
+              <textarea id="season" name="season" class="form-input form-textarea" rows="4" required placeholder="What are you navigating right now?"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Anything else you'd like me to know?</label>
+              <textarea id="message" name="message" class="form-input form-textarea" rows="3" placeholder="Questions, scheduling preferences, etc."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary form-submit" id="form-submit">
+              <span class="form-submit__text">Send Message</span>
+              <span class="form-submit__loading" style="display:none;">Sending...</span>
+            </button>
+          </form>
+
+          <div class="form-success" id="form-success" style="display:none;">
+            <div class="form-success__icon">✓</div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. I'll get back to you within 24-48 hours. I look forward to connecting with you!</p>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="contact-sidebar" data-animate="slide-right">
+          <div class="card contact-info-card">
+            <h3>Book a Free Call</h3>
+            <p>
+              The best way to get started is with a free 30-minute discovery call. We'll discuss your goals, your current season, and how coaching might support you.
+            </p>
+            <div class="divider"></div>
+            <div class="contact-detail">
+              <div class="contact-detail__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-detail__label">Email</span>
+                <a href="mailto:rachel@rachelconnellcoaching.com" class="contact-detail__value">rachel@rachelconnellcoaching.com</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-detail__label">Instagram</span>
+                <a href="https://instagram.com/rachelconnellcoaching" target="_blank" rel="noopener noreferrer" class="contact-detail__value">@rachelconnellcoaching</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card contact-info-card">
+            <h3>What to Expect</h3>
+            <div class="expect-list">
+              <div class="expect-item">
+                <div class="expect-item__check">✓</div>
+                <p>I'll respond within 24-48 hours</p>
+              </div>
+              <div class="expect-item">
+                <div class="expect-item__check">✓</div>
+                <p>No pressure, no commitment</p>
+              </div>
+              <div class="expect-item">
+                <div class="expect-item__check">✓</div>
+                <p>A warm, confidential space to share</p>
+              </div>
+              <div class="expect-item">
+                <div class="expect-item__check">✓</div>
+                <p>We'll find the right fit together</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="credential-mini">
+            <span class="credential-mini__badge">ICF Level 2</span>
+            <span class="credential-mini__text">Certified Professional Coach</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const success = document.getElementById('form-success');
+  const submitBtn = document.getElementById('form-submit');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Show loading state
+    const textEl = submitBtn?.querySelector('.form-submit__text') as HTMLElement;
+    const loadingEl = submitBtn?.querySelector('.form-submit__loading') as HTMLElement;
+    if (textEl) textEl.style.display = 'none';
+    if (loadingEl) loadingEl.style.display = 'inline';
+
+    const formData = new FormData(form);
+    
+    // Web3Forms Configuration
+    formData.append("access_key", "4a86b495-300e-453c-94ae-1c65bf932828");
+    
+    const name = formData.get("firstName") || "Someone";
+    formData.append("subject", `New Coaching Inquiry from ${name}`);
+    formData.append("from_name", "Rachel Connell Coaching Website");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Redirect to the thank you page for Google Analytics conversion tracking
+        window.location.href = '/thank-you';
+      } else {
+        alert("Oops! Something went wrong. Please try emailing directly at rachel@rachelconnellcoaching.com");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Oops! Something went wrong. Please try emailing directly at rachel@rachelconnellcoaching.com");
+    } finally {
+      if (textEl) textEl.style.display = 'inline';
+      if (loadingEl) loadingEl.style.display = 'none';
+    }
+  });
+</script>
+
+<style>
+  /* ===== Page Hero ===== */
+  .page-hero {
+    position: relative;
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-xl);
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .page-hero__bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .page-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .page-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(142, 85, 48, 0.85), rgba(107, 125, 94, 0.8));
+  }
+
+  .page-hero__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== Contact Grid ===== */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  /* ===== Form Styles ===== */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+
+  .form-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.03em;
+  }
+
+  .required {
+    color: var(--color-terracotta);
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid var(--color-cream-dark);
+    border-radius: var(--radius-md);
+    background: var(--color-warm-white);
+    color: var(--color-text);
+    font-size: 0.95rem;
+    transition: all var(--transition-base);
+    outline: none;
+  }
+
+  .form-input:focus {
+    border-color: var(--color-terracotta-light);
+    box-shadow: 0 0 0 3px rgba(176, 106, 59, 0.1);
+  }
+
+  .form-input::placeholder {
+    color: var(--color-text-lighter);
+  }
+
+  .form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238A847E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .form-submit {
+    width: 100%;
+    margin-top: var(--space-sm);
+  }
+
+  /* ===== Form Success ===== */
+  .form-success {
+    text-align: center;
+    padding: var(--space-xl) 0;
+    animation: fadeInUp 0.6s var(--ease-out);
+  }
+
+  .form-success__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--color-sage);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+  }
+
+  .form-success h3 {
+    margin-bottom: var(--space-sm);
+    color: var(--color-sage-dark);
+  }
+
+  /* ===== Sidebar ===== */
+  .contact-info-card {
+    margin-bottom: var(--space-md);
+  }
+
+  .contact-info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info-card p {
+    max-width: none;
+    font-size: 0.95rem;
+  }
+
+  .contact-detail {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: flex-start;
+    margin-top: var(--space-md);
+  }
+
+  .contact-detail__icon {
+    color: var(--color-terracotta);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .contact-detail__label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text-lighter);
+    margin-bottom: 0.15rem;
+  }
+
+  .contact-detail__value {
+    font-size: 0.9rem;
+    word-break: break-all;
+  }
+
+  .expect-list {
+    margin-top: var(--space-sm);
+  }
+
+  .expect-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+  }
+
+  .expect-item__check {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-sage);
+    color: white;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .expect-item p {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+
+  .credential-mini {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-cream);
+    border-radius: var(--radius-full);
+  }
+
+  .credential-mini__badge {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-warm-white);
+    background: var(--color-terracotta);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-full);
+  }
+
+  .credential-mini__text {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1024px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-sidebar {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .page-hero {
+      min-height: 240px;
+    }
+  }
+</style>

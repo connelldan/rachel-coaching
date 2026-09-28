@@ -1,0 +1,259 @@
+---
+
+---
+
+<footer class="footer">
+  <div class="footer__botanical">
+    <img src="/images/botanical-texture.jpg" alt="" class="footer__botanical-img" aria-hidden="true" />
+    <div class="footer__botanical-overlay"></div>
+  </div>
+
+  <div class="footer__content container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo-mark">
+          <svg class="footer__flower" width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M32 8 C28 16, 18 22, 14 30 C10 38, 16 44, 24 40 C28 38, 30 34, 32 28Z" fill="#A6B89A" opacity="0.7"/>
+            <path d="M32 8 C36 16, 46 22, 50 30 C54 38, 48 44, 40 40 C36 38, 34 34, 32 28Z" fill="#A6B89A" opacity="0.55"/>
+            <path d="M32 8 C30 18, 22 26, 20 36 C18 42, 24 46, 30 42 C32 40, 32 36, 32 28Z" fill="#c9d4bf" opacity="0.5"/>
+            <path d="M32 8 C34 18, 42 26, 44 36 C46 42, 40 46, 34 42 C32 40, 32 36, 32 28Z" fill="#c9d4bf" opacity="0.4"/>
+            <path d="M30 24 C28 18, 26 14, 27 10" stroke="#C4835A" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+            <path d="M34 24 C36 18, 38 14, 37 10" stroke="#C4835A" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+            <path d="M32 22 C32 16, 32 12, 32 8" stroke="#C4835A" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+            <circle cx="27" cy="10" r="1.5" fill="#C4835A" opacity="0.5"/>
+            <circle cx="32" cy="8" r="1.5" fill="#C4835A" opacity="0.5"/>
+            <circle cx="37" cy="10" r="1.5" fill="#C4835A" opacity="0.5"/>
+            <path d="M38 42 C42 46, 48 52, 50 56 C44 54, 38 48, 36 44Z" fill="#8B9E7D" opacity="0.6"/>
+          </svg>
+          <span class="footer__logo-name">Rachel Connell</span>
+          <span class="footer__logo-sub">Coaching</span>
+        </div>
+        <p class="footer__tagline serif-italic">Know your purpose. Live intentionally.<br />Don't merely exist.</p>
+        <a
+          href="https://instagram.com/rachelconnellcoaching"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer__instagram-badge"
+          aria-label="Instagram @rachelconnellcoaching"
+        >
+          <svg class="footer__instagram-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>@rachelconnellcoaching</span>
+        </a>
+      </div>
+
+      <div class="footer__nav">
+        <h4 class="footer__heading">Navigate</h4>
+        <ul class="footer__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__nav">
+        <h4 class="footer__heading">Services</h4>
+        <ul class="footer__links">
+          <li><a href="/services">1:1 Coaching</a></li>
+          <li><a href="/services#pricing">Pricing</a></li>
+          <li><a href="/contact">Discovery Call</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__nav">
+        <h4 class="footer__heading">Connect</h4>
+        <ul class="footer__links">
+          <li><a href="/contact">Get in Touch</a></li>
+          <li><a href="/contact">Book a Free Call</a></li>
+          <li>
+            <a href="https://instagram.com/rachelconnellcoaching" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; {new Date().getFullYear()} Rachel Connell Coaching. All rights reserved.</p>
+      <p class="footer__credential">ICF Level 2 Certified Professional Coach</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-charcoal);
+    color: rgba(255, 253, 249, 0.7);
+  }
+
+  .footer__botanical {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .footer__botanical-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.06;
+  }
+
+  .footer__botanical-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, var(--color-charcoal) 0%, transparent 100%);
+  }
+
+  .footer__content {
+    position: relative;
+    z-index: 1;
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-lg);
+  }
+
+  .footer__top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid rgba(255, 253, 249, 0.1);
+  }
+
+  .footer__logo-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer__flower {
+    margin-bottom: 0.3rem;
+  }
+
+  .footer__logo-name {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: rgba(255, 253, 249, 0.85);
+  }
+
+  .footer__logo-sub {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    color: var(--color-sage-light);
+  }
+
+  .footer__tagline {
+    font-size: 1.1rem;
+    color: rgba(255, 253, 249, 0.6);
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer__instagram-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 9999px;
+    background: rgba(255, 253, 249, 0.05);
+    border: 1px solid rgba(255, 253, 249, 0.12);
+    color: rgba(255, 253, 249, 0.75);
+    font-size: 0.8rem;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: all var(--transition-base);
+    width: fit-content;
+  }
+
+  .footer__instagram-badge:hover {
+    background: rgba(176, 106, 59, 0.2);
+    border-color: var(--color-terracotta-light);
+    color: var(--color-warm-white);
+    transform: translateY(-1px);
+  }
+
+  .footer__instagram-icon {
+    flex-shrink: 0;
+    color: var(--color-terracotta-light);
+    transition: transform var(--transition-base);
+  }
+
+  .footer__instagram-badge:hover .footer__instagram-icon {
+    transform: scale(1.1);
+  }
+
+  .footer__heading {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-sage-light);
+    margin-bottom: var(--space-md);
+  }
+
+  .footer__links li {
+    margin-bottom: 0.6rem;
+  }
+
+  .footer__links a {
+    color: rgba(255, 253, 249, 0.6);
+    font-size: 0.95rem;
+    transition: color var(--transition-base);
+  }
+
+  .footer__links a:hover {
+    color: var(--color-cream);
+  }
+
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-lg);
+    font-size: 0.85rem;
+    color: rgba(255, 253, 249, 0.35);
+  }
+
+  .footer__credential {
+    font-style: italic;
+  }
+
+  @media (max-width: 900px) {
+    .footer__top {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+    }
+
+    .footer__brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer__top {
+      grid-template-columns: 1fr;
+    }
+
+    .footer__bottom {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
+</style>
