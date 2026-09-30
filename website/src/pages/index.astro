@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="Home" description="Rachel Connell Coaching | Empowering Christian women to live with purpose, clarity, and confidence through professional coaching.">
+<BaseLayout title="Home" description="Rachel Connell Coaching | Empowering women to live with purpose, clarity, and confidence through professional coaching.">
   <Header />
 
   <!-- ===== Hero Section ===== -->
@@ -42,6 +42,77 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
+  <!-- ===== Is Coaching For Me? ===== -->
+  <section class="section section--white" id="is-coaching-for-me">
+    <div class="container container--narrow" data-animate>
+      <div class="text-center">
+        <span class="eyebrow">Explore</span>
+        <h2>Is coaching <span class="serif-italic">for me?</span></h2>
+        <div class="divider divider--center"></div>
+      </div>
+      <p class="coaching-for-me__lead">
+        Coaching can be the support you need when you are going through any kind of transition and you want to be sure that you're on the right path. It's for the woman who...
+      </p>
+      <ul class="coaching-for-me__list">
+        <li data-animate>
+          <span class="coaching-for-me__marker"></span>
+          <span>Is starting a new job and unsure how it's going to impact her home life or if it's even the right choice</span>
+        </li>
+        <li data-animate>
+          <span class="coaching-for-me__marker"></span>
+          <span>Just moved across the country and is starting over</span>
+        </li>
+        <li data-animate>
+          <span class="coaching-for-me__marker"></span>
+          <span>Is returning to work after her maternity leave ended and may be feeling both excitement and grief</span>
+        </li>
+        <li data-animate>
+          <span class="coaching-for-me__marker"></span>
+          <span>Has become a caretaker for aging parents and is feeling overwhelmed or lost</span>
+        </li>
+        <li data-animate>
+          <span class="coaching-for-me__marker"></span>
+          <span>Is going through the death of a relationship and trying to see what moving forward looks like</span>
+        </li>
+        <li data-animate>
+          <span class="coaching-for-me__marker"></span>
+          <span>Is in the thick of motherhood and unsure if she's even doing a good job</span>
+        </li>
+      </ul>
+      <p class="coaching-for-me__closing">
+        If you see yourself in any of these scenarios, and you are tired of feeling the way you are, coaching might be a tool that supports you in the moving forward process.
+      </p>
+      <div class="text-center" style="margin-top: var(--space-lg);">
+        <a href="/contact" class="btn btn--primary">Book a Free Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Who I Coach Section ===== -->
+  <section class="section section--cream" id="who">
+    <div class="container">
+      <div class="grid-2">
+        <div class="who__image" data-animate="slide-left">
+          <div class="img-frame">
+            <img src="/images/lifestyle-flatlay.jpg" alt="Bible and journal with coffee on a wooden table" />
+          </div>
+        </div>
+        <div class="who__content" data-animate="slide-right">
+          <span class="eyebrow">Who I Coach</span>
+          <h2>Women in every season</h2>
+          <div class="divider"></div>
+          <p>
+            I coach women throughout the many different seasons they find themselves in. Women wear many hats throughout their lives, and as a coach I aim to support them so that as life swirls around them, they feel grounded and steady in how they move forward.
+          </p>
+          <p>
+            Each moment in life is significant, and when you are in a period of transition, upheaval or change, coaching can be a tool that helps you walk into uncertainty with confidence and peace.
+          </p>
+          <a href="/about" class="btn btn--primary">Read My Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Philosophy Section ===== -->
   <section class="section section--white" id="philosophy">
     <div class="container">
@@ -61,33 +132,8 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <!-- ===== Who I Coach Section ===== -->
-  <section class="section section--cream" id="who">
-    <div class="container">
-      <div class="grid-2">
-        <div class="who__image" data-animate="slide-left">
-          <div class="img-frame">
-            <img src="/images/lifestyle-flatlay.jpg" alt="Bible and journal with coffee on a wooden table" />
-          </div>
-        </div>
-        <div class="who__content" data-animate="slide-right">
-          <span class="eyebrow">Who I Coach</span>
-          <h2>Christian women in every season</h2>
-          <div class="divider"></div>
-          <p>
-            I coach Christian women throughout the many different seasons they find themselves in. They are women who hold their faith in Christ dearly, and who desire not to just do life <em>for</em> God, but to do it <em>with</em> Him.
-          </p>
-          <p>
-            You might be a college student launching into adulthood, a few years into your career navigating marriage and family, or further along wondering "now what?" Coaching is for you, because each moment of your life is significant.
-          </p>
-          <a href="/about" class="btn btn--primary">Read My Story</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== Services Overview ===== -->
-  <section class="section" id="services-overview">
+  <section class="section section--cream" id="services-overview">
     <div class="container text-center">
       <span class="eyebrow" data-animate>Services</span>
       <h2 data-animate>How we can work together</h2>
@@ -308,6 +354,67 @@ import Footer from '../components/Footer.astro';
   @keyframes scrollPulse {
     0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
     50% { opacity: 1; transform: scaleY(1); }
+  }
+
+  /* ===== Is Coaching For Me? ===== */
+  .coaching-for-me__lead {
+    font-size: 1.15rem;
+    color: var(--color-text);
+    line-height: 1.8;
+    margin: var(--space-lg) auto var(--space-md);
+    max-width: 680px;
+    text-align: center;
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
+
+  .coaching-for-me__list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-md) auto var(--space-lg);
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .coaching-for-me__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-cream-light);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-sage);
+    transition: all var(--transition-base);
+  }
+
+  .coaching-for-me__list li:hover {
+    background: var(--color-cream);
+    transform: translateX(4px);
+  }
+
+  .coaching-for-me__marker {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-terracotta);
+    margin-top: 0.55rem;
+  }
+
+  .coaching-for-me__list li span:last-child {
+    color: var(--color-text);
+    line-height: 1.7;
+  }
+
+  .coaching-for-me__closing {
+    font-size: 1.05rem;
+    color: var(--color-text);
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 680px;
+    text-align: center;
   }
 
   /* ===== Services Grid ===== */
