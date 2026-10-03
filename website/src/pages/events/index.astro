@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Events" description="Upcoming events and workshops with Rachel Connell Coaching.">
+  <Header />
+
+  <!-- ===== Page Hero ===== -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="/images/botanical-texture.jpg" alt="" aria-hidden="true" />
+      <div class="page-hero__overlay"></div>
+    </div>
+    <div class="container page-hero__content text-center">
+      <span class="eyebrow animate-in" style="color: var(--color-cream-light);">Schedule</span>
+      <h1 class="animate-in animate-in--delay-1" style="color: var(--color-warm-white);">Upcoming Events</h1>
+    </div>
+  </section>
+
+  <!-- ===== Events List ===== -->
+  <section class="section section--white">
+    <div class="container container--narrow">
+      <div class="event-card" data-animate="slide-up">
+        <div class="event-card__date">
+          <span class="event-card__month">Oct</span>
+          <span class="event-card__day">22</span>
+        </div>
+        <div class="event-card__content">
+          <span class="eyebrow">Virtual Workshop</span>
+          <h3><a href="/events/shifting-seasons">Shifting Seasons</a></h3>
+          <p class="event-time" data-time="2026-10-22T18:00:00-06:00">Thursday, October 22nd at 6:00 PM MDT</p>
+          <p class="event-desc">
+            A 40-minute free, virtual reflection workshop for women going through a major transition in life.
+          </p>
+          <a href="/events/shifting-seasons" class="btn btn--primary" style="margin-top: var(--space-sm);">View Details & Register</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<script>
+  // Format dates dynamically based on user's local timezone
+  document.addEventListener('DOMContentLoaded', () => {
+    const timeElements = document.querySelectorAll('.event-time');
+    
+    timeElements.forEach(el => {
+      const timeStr = el.getAttribute('data-time');
+      if (timeStr) {
+        const date = new Date(timeStr);
+        
+        const options: Intl.DateTimeFormatOptions = { 
+          weekday: 'long', 
+          month: 'long', 
+          day: 'numeric', 
+          hour: 'numeric', 
+          minute: '2-digit',
+          timeZoneName: 'short' 
+        };
+        
+        el.textContent = date.toLocaleString(undefined, options);
+      }
+    });
+  });
+</script>
+
+<style>
+  /* ===== Page Hero ===== */
+  .page-hero {
+    position: relative;
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-xl);
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .page-hero__bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .page-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .page-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(142, 85, 48, 0.85), rgba(107, 125, 94, 0.8));
+  }
+
+  .page-hero__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== Event Card ===== */
+  .event-card {
+    display: flex;
+    gap: var(--space-lg);
+    background: var(--color-cream);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .event-card__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-warm-white);
+    min-width: 90px;
+    height: 90px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(176, 106, 59, 0.2);
+    flex-shrink: 0;
+  }
+
+  .event-card__month {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-terracotta);
+    letter-spacing: 0.1em;
+  }
+
+  .event-card__day {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    line-height: 1;
+    color: var(--color-charcoal);
+  }
+
+  .event-card__content h3 {
+    margin-bottom: 0.25rem;
+  }
+  
+  .event-card__content h3 a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .event-card__content h3 a:hover {
+    color: var(--color-terracotta);
+  }
+
+  .event-time {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--color-sage-dark);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .event-desc {
+    color: var(--color-text);
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .event-card {
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .event-card__date {
+      width: 90px;
+    }
+  }
+</style>

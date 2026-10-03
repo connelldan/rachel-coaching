@@ -1,0 +1,274 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Shifting Seasons Workshop" description="A Virtual Reflection Workshop for Women. Deep reflection on what your shift is costing, forcing, and impacting in your life.">
+  <Header />
+
+  <!-- ===== Page Hero ===== -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="/images/botanical-texture.jpg" alt="" aria-hidden="true" />
+      <div class="page-hero__overlay"></div>
+    </div>
+    <div class="container page-hero__content text-center">
+      <span class="eyebrow animate-in" style="color: var(--color-cream-light);">Virtual Workshop</span>
+      <h1 class="animate-in animate-in--delay-1" style="color: var(--color-warm-white);">Shifting Seasons</h1>
+    </div>
+  </section>
+
+  <!-- ===== Event Detail Section ===== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="event-grid">
+        
+        <!-- Main Content -->
+        <div class="event-main" data-animate="slide-up">
+          <span class="eyebrow">Are you going through a major transition in your life?</span>
+          <h2>Do you feel lost? Scared? <span class="serif-italic">Uprooted?</span></h2>
+          <div class="divider"></div>
+          
+          <p class="lead">You're not alone in figuring out how to move forward.</p>
+          
+          <p>
+            <strong>Shifting Seasons</strong> is a 40-minute free, virtual reflection workshop for women.
+          </p>
+          
+          <h3 style="margin-top: var(--space-lg);">For women who are navigating a shift in seasons...</h3>
+          <ul class="event-list">
+            <li>Returning to work after maternity leave</li>
+            <li>Changing careers</li>
+            <li>Graduating college</li>
+            <li>Becoming an empty nester</li>
+            <li>Caring for aging parents, etc.</li>
+          </ul>
+
+          <h3 style="margin-top: var(--space-lg);">What You Get</h3>
+          <div class="card event-feature-card">
+            <p>
+              Deep reflection on what your shift is costing, forcing, and impacting in your life. You will leave with a personal, empowering statement to navigate your transition with confidence.
+            </p>
+          </div>
+          
+          <div class="about-coach card" style="background: var(--color-sage); color: var(--color-warm-white); margin-top: var(--space-xl);">
+            <h3 style="color: var(--color-warm-white); font-size: 1.2rem; text-align: center; margin-bottom: var(--space-sm);">About Rachel Connell</h3>
+            <p style="font-size: 0.95rem; text-align: center; margin: 0;">
+              Rachel is a professional coach with nearly seven years of experience coaching adults navigating life's transitions, career goals, setbacks and more. Her business, Rachel Connell Coaching, seeks to support Christian women to take ownership of their life's journey as confident, grounded individuals.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sidebar / Registration Form -->
+        <div class="event-sidebar" data-animate="slide-left">
+          <div class="card registration-card">
+            <h3>Reserve Your Seat</h3>
+            
+            <div class="event-time-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <p class="dynamic-time" data-time="2026-10-22T18:00:00-06:00">
+                Thursday, October 22nd at 6:00 PM MDT
+              </p>
+            </div>
+            
+            <hr class="separator" />
+            
+            <a href="https://www.eventbrite.com/e/navigating-shifting-seasons-a-virtual-reflection-workshop-for-women-tickets-2002832035533?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="width: 100%; text-align: center; display: block;">
+              Register on Eventbrite
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<script>
+  // Format dates dynamically based on user's local timezone
+  document.addEventListener('DOMContentLoaded', () => {
+    const timeElements = document.querySelectorAll('.dynamic-time');
+    
+    timeElements.forEach(el => {
+      const timeStr = el.getAttribute('data-time');
+      if (timeStr) {
+        const date = new Date(timeStr);
+        
+        const options: Intl.DateTimeFormatOptions = { 
+          weekday: 'long', 
+          month: 'long', 
+          day: 'numeric', 
+          hour: 'numeric', 
+          minute: '2-digit',
+          timeZoneName: 'short' 
+        };
+        
+        el.textContent = date.toLocaleString(undefined, options);
+      }
+    });
+  });
+
+
+</script>
+
+<style>
+  /* ===== Page Hero ===== */
+  .page-hero {
+    position: relative;
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-xl);
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .page-hero__bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .page-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .page-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(142, 85, 48, 0.85), rgba(107, 125, 94, 0.8));
+  }
+
+  .page-hero__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== Event Grid ===== */
+  .event-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .event-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-sm) 0 0 0;
+  }
+
+  .event-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+
+  .event-list li::before {
+    content: "•";
+    color: var(--color-terracotta);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+  }
+
+  .event-feature-card {
+    background: var(--color-cream);
+    padding: var(--space-lg);
+    border-left: 4px solid var(--color-terracotta);
+  }
+  
+  .event-feature-card p {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--color-charcoal);
+  }
+
+  /* ===== Sidebar ===== */
+  .registration-card {
+    padding: var(--space-xl);
+    position: sticky;
+    top: calc(var(--nav-height) + var(--space-lg));
+  }
+  
+  .event-time-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--color-cream);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-top: var(--space-sm);
+    color: var(--color-terracotta);
+  }
+  
+  .event-time-box p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-charcoal);
+  }
+  
+  .separator {
+    border: 0;
+    height: 1px;
+    background: rgba(176, 106, 59, 0.2);
+    margin: var(--space-md) 0;
+  }
+
+  /* ===== Form Styles ===== */
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+
+  .form-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.03em;
+  }
+
+  .required {
+    color: var(--color-terracotta);
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid var(--color-cream-dark);
+    border-radius: var(--radius-md);
+    background: var(--color-warm-white);
+    color: var(--color-text);
+    font-size: 0.95rem;
+    transition: all var(--transition-base);
+    outline: none;
+  }
+
+  .form-input:focus {
+    border-color: var(--color-terracotta-light);
+    box-shadow: 0 0 0 3px rgba(176, 106, 59, 0.1);
+  }
+
+  .form-submit {
+    width: 100%;
+    margin-top: var(--space-sm);
+  }
+
+  @media (max-width: 900px) {
+    .event-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
