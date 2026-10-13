@@ -33,7 +33,7 @@ import Footer from '../components/Footer.astro';
           <h2>Thank you for <span class="serif-italic">stopping by</span></h2>
           <div class="divider"></div>
           <p>
-            I am deeply passionate about the possibilities that can open up to women of God and His Kingdom when they utilize coaching as a tool in their journey. That's why I do what I do. I'm eager to get to know you and see how we can work together as you continue on the next part of your journey.
+            I am deeply passionate about the possibilities that can open up to women when they utilize coaching as a tool in their journey. That's why I do what I do. I'm eager to get to know you and see how we can work together as you continue on the next part of your journey.
           </p>
           <p>
             I have worked as a coach since 2020, starting in a corporate environment where I specialized in education and career coaching. I partnered with hundreds of clients: from recent high school grads to men and women nearing retirement or starting second careers.
@@ -43,6 +43,13 @@ import Footer from '../components/Footer.astro';
           </p>
         </div>
       </div>
+
+      <!-- Prominent Callout -->
+      <div class="distraction-callout" data-animate>
+        <p class="distraction-callout__text">
+          This world is distracting, and coaching is a tool to peel back those distractions, expose the lies you believe, and address the habits and rhythms that keep you chained. Coaching can then help to set you firmly on the path God has written out for you.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -51,7 +58,7 @@ import Footer from '../components/Footer.astro';
     <div class="container container--narrow">
       <div class="journey" data-animate>
         <span class="eyebrow">My Journey</span>
-        <h2>From Bible college to <span class="serif-italic">coaching with purpose</span></h2>
+        <h2>Coaching with <span class="serif-italic">purpose</span></h2>
         <div class="divider"></div>
         <p>
           Prior to stepping into the workforce, I attended and graduated from Moody Bible Institute where I earned a Bachelor's of Theology. The shift from Bible college to working in the corporate world, and becoming a wife and a mom within that time, has deeply impacted my beliefs and convictions around coaching, and the powerful impact it can have.
@@ -60,16 +67,13 @@ import Footer from '../components/Footer.astro';
           In 2026, I stepped away from coaching in the corporate world and began Rachel Connell Coaching. My passion is coaching women as they navigate the variety of transitions and seasons they walk through.
         </p>
         <p>
-          I would have benefited so deeply from having a personal coach at each pivotal moment and season in my life. I believe it would've challenged me to grapple with decisions, beliefs, habits, and so much more in a deeply impactful way.
+          I would have benefited so deeply from having a personal coach at each pivotal moment and season in my life. I believe it would've challenged me to grapple with decisions, beliefs, and habits in a more impactful way.
         </p>
 
         <blockquote>
           So that's why I coach other women. We are meant to be powerful tools on this earth in the Hands of our Father.
         </blockquote>
 
-        <p>
-          This world is distracting, and coaching is a tool to peel back those distractions, expose the lies you believe, and address the habits and rhythms that keep you chained. Coaching can then help to set you firmly on the path God has written out for you.
-        </p>
         <p class="lead" style="color: var(--color-terracotta); font-family: var(--font-serif); font-style: italic; margin-top: var(--space-lg);">
           I hope to partner with you in your journey.
         </p>
@@ -89,7 +93,7 @@ import Footer from '../components/Footer.astro';
             How easy it is to just let life carry us, for better or for worse. We can start to see ourselves as people who life just happens to. And it's true, life does just happen, but we do have the ability to respond and act.
           </p>
           <p>
-            That can be easier said than done. When you lose a job, what does moving forward look like? When your relationship ends, how do you rebuild your identity and your life? When your children are all out of the house, where do you find yourself? Life happens, but you get to choose how to respond.
+            That can be easier said than done. When you lose a job, what does moving forward look like? When your relationship ends, how do you rebuild your identity and your life? When your children are all out of the house, where do you find yourself? Maybe you don't see yourself in those scenarios, but we are all navigating something. Life happens, and the beauty (and difficulty) of it is that you get to choose how to respond.
           </p>
           <p>
             It can seem like there isn't time to pause when "life happens", but I'd gently challenge that belief by stating that it's those very moments when it's the most important time to pause.
@@ -215,6 +219,29 @@ import Footer from '../components/Footer.astro';
     max-width: 450px;
   }
 
+  /* ===== Distraction Callout ===== */
+  .distraction-callout {
+    background: linear-gradient(135deg, var(--color-warm-white) 0%, var(--color-cream) 100%);
+    border: 1px solid var(--color-cream-dark);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl) var(--space-2xl);
+    max-width: 820px;
+    margin: var(--space-2xl) auto 0;
+    box-shadow: 0 12px 36px rgba(58, 53, 48, 0.05);
+    text-align: center;
+    position: relative;
+  }
+
+  .distraction-callout__text {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    margin: 0;
+    max-width: none;
+  }
+
   /* ===== Philosophy Card ===== */
   .philosophy-accent-card {
     background: var(--color-cream);
@@ -303,6 +330,16 @@ import Footer from '../components/Footer.astro';
   }
 
   @media (max-width: 768px) {
+    .distraction-callout {
+      padding: var(--space-lg) var(--space-md);
+      margin-top: var(--space-xl);
+    }
+
+    .distraction-callout__text {
+      font-size: 1.2rem;
+      line-height: 1.55;
+    }
+
     .who-cards {
       grid-template-columns: 1fr;
     }
