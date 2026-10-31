@@ -149,7 +149,6 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <div class="credential-mini">
-            <span class="credential-mini__badge">ICF Level 2</span>
             <span class="credential-mini__text">Certified Professional Coach</span>
           </div>
         </div>
@@ -411,27 +410,17 @@ import Footer from '../components/Footer.astro';
   .credential-mini {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    justify-content: center;
     padding: var(--space-sm) var(--space-md);
     background: var(--color-cream);
     border-radius: var(--radius-full);
   }
 
-  .credential-mini__badge {
-    font-family: var(--font-sans);
-    font-size: 0.7rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-warm-white);
-    background: var(--color-terracotta);
-    padding: 0.3rem 0.8rem;
-    border-radius: var(--radius-full);
-  }
-
   .credential-mini__text {
-    font-size: 0.85rem;
-    color: var(--color-text-light);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-terracotta);
+    letter-spacing: 0.02em;
   }
 
   /* ===== Responsive ===== */
