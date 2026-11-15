@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import NewsletterEmbed from '../components/NewsletterEmbed.astro';
 ---
 
 <BaseLayout title="Contact" description="Schedule a free 30-minute discovery call with Rachel Connell. Let's explore how coaching can support you on your journey.">
@@ -162,12 +163,10 @@ import Footer from '../components/Footer.astro';
       <span class="eyebrow">Stay Connected</span>
       <h2>Join my <span class="serif-italic">email community</span></h2>
       <div class="divider divider--center"></div>
-      <p class="lead" style="margin: 0 auto var(--space-md); max-width: 540px;">
-        Not quite ready for 1:1 coaching yet? Join my email list for coaching reflections, encouragement, and updates delivered straight to your inbox.
+      <p class="lead" style="margin: 0 auto; max-width: 540px;">
+        Not quite ready for 1:1 coaching yet? Stay connected here.
       </p>
-      <div class="newsletter-embed">
-        <iframe width="540" height="305" src="https://605cc0c5.sibforms.com/v2/serve/MUIFACWjVtHYWNHsrp199GwdRBCOSL1q43sBk6lb4S7pwj0htyOfjTITyLBbJGHrVxCQ_4JBfeLU5cEpj-UBS1KcIPGOE-3GgMzqO21cXK-8nB2n-OmH7g-3yckExX40ZzNaOVfH6hTgNdAgK_axtd07GTM_I41C6cvn1wanXGtZ1M2x4vqkagFRRe2eWzr2MRdvjEono3Yu50GONw==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
-      </div>
+      <NewsletterEmbed />
     </div>
   </section>
 
@@ -458,23 +457,5 @@ import Footer from '../components/Footer.astro';
     .page-hero {
       min-height: 240px;
     }
-  }
-
-  /* ===== Newsletter Embed ===== */
-  .newsletter-embed {
-    margin-top: var(--space-md);
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .newsletter-embed iframe {
-    border-radius: var(--radius-lg);
-    box-shadow: 0 10px 30px rgba(58, 53, 48, 0.08);
-    border: 1px solid var(--color-cream-dark);
-    background: #ffffff;
-    width: 100%;
-    max-width: 540px;
-    min-height: 305px;
   }
 </style>

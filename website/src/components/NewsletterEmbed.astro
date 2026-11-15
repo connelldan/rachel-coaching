@@ -1,0 +1,48 @@
+---
+/**
+ * Brevo (sibforms) email signup form, embedded via iframe.
+ * The form's own heading/description/background are controlled in Brevo,
+ * so we only set the frame size here. Brevo iframes don't auto-resize,
+ * so the height must be tall enough to show the whole form (incl. reCAPTCHA + button).
+ */
+const FORM_SRC =
+  'https://605cc0c5.sibforms.com/v2/serve/MUIFACWjVtHYWNHsrp199GwdRBCOSL1q43sBk6lb4S7pwj0htyOfjTITyLBbJGHrVxCQ_4JBfeLU5cEpj-UBS1KcIPGOE-3GgMzqO21cXK-8nB2n-OmH7g-3yckExX40ZzNaOVfH6hTgNdAgK_axtd07GTM_I41C6cvn1wanXGtZ1M2x4vqkagFRRe2eWzr2MRdvjEono3Yu50GONw==';
+---
+
+<div class="newsletter-embed">
+  <iframe
+    src={FORM_SRC}
+    title="Email newsletter signup"
+    width="540"
+    height="620"
+    frameborder="0"
+    scrolling="auto"
+    loading="lazy"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<style>
+  .newsletter-embed {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: var(--space-md);
+  }
+
+  .newsletter-embed iframe {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: 620px;
+    border: 0;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px rgba(58, 53, 48, 0.08);
+  }
+
+  @media (max-width: 600px) {
+    .newsletter-embed iframe {
+      height: 720px;
+    }
+  }
+</style>
