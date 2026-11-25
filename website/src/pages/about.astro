@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import NewsletterEmbed from '../components/NewsletterEmbed.astro';
 ---
 
 <BaseLayout title="About" description="Meet Rachel Connell, a certified professional coach passionate about empowering women to live intentionally and walk in their God-given purpose.">
@@ -39,8 +40,16 @@ import Footer from '../components/Footer.astro';
             I have worked as a coach since 2020, starting in a corporate environment where I specialized in education and career coaching. I partnered with hundreds of clients: from recent high school grads to men and women nearing retirement or starting second careers.
           </p>
           <p>
-            While working in this environment, I earned my Professional Coach Certification through an ICF-accredited academy.
+            I hold my ACC (Associate Certified Coach) credential through the ICF (International Coaching Federation), which stands firm as the gold standard of coaching.
           </p>
+          <div class="about-acc-badge">
+            <img
+              src="/images/credentials/icf-acc-associate-certified-coach-badge.png"
+              alt="ICF ACC Associate Certified Coach Credential"
+              width="130"
+              height="112"
+            />
+          </div>
         </div>
       </div>
 
@@ -71,7 +80,7 @@ import Footer from '../components/Footer.astro';
         </p>
 
         <blockquote>
-          So that's why I coach other women. We are meant to be powerful tools on this earth in the Hands of our Father.
+          So that's why I coach other women. We are meant to be powerful tools in God's hands as we step forward into who we are meant to be.
         </blockquote>
 
         <p class="lead" style="color: var(--color-terracotta); font-family: var(--font-serif); font-style: italic; margin-top: var(--space-lg);">
@@ -143,15 +152,19 @@ import Footer from '../components/Footer.astro';
     <div class="container container--narrow text-center" data-animate>
       <span class="eyebrow">Credentials</span>
       <h2>Certified & <span class="serif-italic">qualified</span></h2>
+      <p class="credentials__subtitle">ICF credentialed coach- ACC</p>
       <div class="divider divider--center"></div>
       <div class="credential-card card">
-        <h3>Advanced Professional Coaching Certification</h3>
-        <p style="margin: var(--space-sm) auto 0;">
-          Certified through the Academy of Creative Coaching. An immersive advanced program preparing coaches to meet the highest international standards. This certification means I have completed 125 hours of coaching education, 400 hours of coaching experience since completing my program, and 10 hours of mentor coaching.
-        </p>
-        <div class="credential-badges" style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; align-items: center;">
-          <img src="/images/credentials/academy-of-creative-coaching-certification-badge.png" alt="Academy of Creative Coaching Certification" style="max-height: 150px; width: auto;" />
-          <img src="/images/credentials/icf-level-2-coach-training-badge.png" alt="ICF Level 2 Certification" style="max-height: 150px; width: auto;" />
+        <ul class="credential-bullets">
+          <li>Coaching professionally since 2020</li>
+          <li>Did PCC (Professional Certified Coach) education training in February 2025</li>
+          <li>Have earned about 450 coaching hours since then</li>
+          <li>Earned my ICF (International Coaching Federation) credential- ACC in November 2026</li>
+        </ul>
+        <div class="credential-badges" style="display: flex; justify-content: center; gap: 24px; margin-top: 30px; align-items: center; flex-wrap: wrap;">
+          <img src="/images/credentials/academy-of-creative-coaching-certification-badge.png" alt="Academy of Creative Coaching Certification" style="max-height: 130px; width: auto;" />
+          <img src="/images/credentials/icf-level-2-coach-training-badge.png" alt="ICF Level 2 Certification" style="max-height: 130px; width: auto;" />
+          <img src="/images/credentials/icf-acc-associate-certified-coach-badge.png" alt="ICF ACC Associate Certified Coach Badge" style="max-height: 130px; width: auto;" />
         </div>
       </div>
     </div>
@@ -172,7 +185,11 @@ import Footer from '../components/Footer.astro';
       <p>
         I believe in the power of the Holy Spirit to enliven us to live holy lives and to know what is good and right. There's a whole lot more I could write, but I'm happy to discuss any questions you may have!
       </p>
-      <div style="margin-top: var(--space-lg);">
+      <p style="margin-top: var(--space-md); font-weight: 500;">
+        Sign up for my newsletter for notifications of when I put out new blogs, many of which will talk about these topics!
+      </p>
+      <NewsletterEmbed />
+      <div style="margin-top: var(--space-xl); text-align: center;">
         <a href="/contact" class="btn btn--primary">Let's Talk</a>
       </div>
     </div>
@@ -305,28 +322,52 @@ import Footer from '../components/Footer.astro';
     padding: var(--space-xl);
   }
 
-  .credential-badge {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
+  .about-acc-badge {
     margin-top: var(--space-md);
-    padding: var(--space-sm) var(--space-lg);
-    background: var(--color-cream);
-    border-radius: var(--radius-full);
   }
 
-  .credential-badge__label {
+  .about-acc-badge img {
+    max-height: 110px;
+    width: auto;
+  }
+
+  .credentials__subtitle {
     font-family: var(--font-sans);
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 500;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
     color: var(--color-terracotta);
+    margin: var(--space-xs) auto 0;
   }
 
-  .credential-badge__sub {
-    font-size: 0.75rem;
-    color: var(--color-text-lighter);
+  .credential-bullets {
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .credential-bullets li {
+    position: relative;
+    padding-left: 1.4rem;
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .credential-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-terracotta);
+    font-size: 1.4rem;
+    line-height: 1;
+    top: -2px;
   }
 
   @media (max-width: 768px) {

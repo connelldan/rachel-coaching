@@ -7,7 +7,7 @@ import NewsletterEmbed from '../components/NewsletterEmbed.astro';
 
 <BaseLayout
   title="Blog"
-  description="Reflections, insights, and biblical encouragement on faith, purpose, and navigating life's seasons from Rachel Connell Coaching."
+  description="Receive blogs and biblical reflections directly to your inbox from Rachel Connell Coaching."
 >
   <Header />
 
@@ -21,87 +21,32 @@ import NewsletterEmbed from '../components/NewsletterEmbed.astro';
       <span class="eyebrow animate-in" style="color: var(--color-cream-light);">Reflections & Insights</span>
       <h1 class="animate-in animate-in--delay-1" style="color: var(--color-warm-white);">The Blog</h1>
       <p class="page-hero__lead animate-in animate-in--delay-2">
-        Honest reflections, biblical encouragement, and thoughtful guidance on living with intention, uncovering your purpose, and walking faithfully through every season.
+        Receive blogs directly to your inbox when you sign up for my newsletter here.
       </p>
     </div>
   </section>
 
   <!-- ===== Newsletter Subscription Section ===== -->
-  <section class="section section--cream" id="subscribe">
+  <section class="section section--white" id="subscribe">
     <div class="container container--narrow text-center" data-animate>
-      <span class="eyebrow">Stay Connected</span>
-      <h2>Get new posts <span class="serif-italic">in your inbox</span></h2>
+      <span class="eyebrow">Direct to Your Inbox</span>
+      <h2>Join the <span class="serif-italic">Newsletter</span></h2>
       <div class="divider divider--center"></div>
-      <NewsletterEmbed />
-    </div>
-  </section>
-
-  <!-- ===== Upcoming Reflections Section ===== -->
-  <section class="section section--white" id="articles">
-    <div class="container">
-      <div class="text-center" data-animate>
-        <span class="eyebrow">Upcoming Articles</span>
-        <h2>Themes & <span class="serif-italic">reflections</span></h2>
-        <div class="divider divider--center"></div>
-        <p class="lead" style="margin: 0 auto var(--space-xl); max-width: 600px;">
-          New long-form essays and coaching reflections are on the way. Here is a glimpse of what is coming to the blog.
-        </p>
-      </div>
-
-      <div class="blog-grid">
-        <!-- Article Card 1 -->
-        <article class="blog-card card" data-animate>
-          <div class="blog-card__header">
-            <span class="blog-card__tag">Life Transitions</span>
-            <span class="blog-card__badge">Coming Soon</span>
-          </div>
-          <h3 class="blog-card__title">Navigating the In-Between: Why Transitions Feel So Disorienting</h3>
-          <p class="blog-card__excerpt">
-            Whether you just relocated across the country, started a new career, or stepped into motherhood, the space between what was and what will be is rarely comfortable. Why the intentional pause matters most when life feels unsettled.
-          </p>
-          <div class="blog-card__footer">
-            <span class="blog-card__status">Subscribe above to read first</span>
-          </div>
-        </article>
-
-        <!-- Article Card 2 -->
-        <article class="blog-card card" data-animate>
-          <div class="blog-card__header">
-            <span class="blog-card__tag">Intentional Living</span>
-            <span class="blog-card__badge">Coming Soon</span>
-          </div>
-          <h3 class="blog-card__title">Peeling Back Distractions: Exposing the Lies That Keep Us Stuck</h3>
-          <p class="blog-card__excerpt">
-            This world is full of noise that subtly dictates how we spend our energy and who we think we should be. Exploring the habits and rhythms that keep us chained, and learning how to respond rather than merely react.
-          </p>
-          <div class="blog-card__footer">
-            <span class="blog-card__status">Subscribe above to read first</span>
-          </div>
-        </article>
-
-        <!-- Article Card 3 -->
-        <article class="blog-card card" data-animate>
-          <div class="blog-card__header">
-            <span class="blog-card__tag">Faith & Purpose</span>
-            <span class="blog-card__badge">Coming Soon</span>
-          </div>
-          <h3 class="blog-card__title">Don't Merely Exist: Grounding Your Worth in Who God Created You to Be</h3>
-          <p class="blog-card__excerpt">
-            We are meant to be powerful tools on this earth in the Hands of our Father. Discovering clarity around your convictions starts when you learn to silence self-doubt and step forward with quiet confidence.
-          </p>
-          <div class="blog-card__footer">
-            <span class="blog-card__status">Subscribe above to read first</span>
-          </div>
-        </article>
+      <p class="lead" style="margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
+        Sign up below to receive fresh reflections, coaching insights, and new writings as soon as they are published.
+      </p>
+      
+      <div class="newsletter-card card">
+        <NewsletterEmbed />
       </div>
 
       <!-- Encouragement Banner -->
-      <div class="blog-banner card" data-animate>
+      <div class="blog-banner card" data-animate style="margin-top: var(--space-2xl);">
         <div class="blog-banner__content">
-          <span class="eyebrow" style="color: var(--color-terracotta);">Have a topic or question in mind?</span>
+          <span class="eyebrow" style="color: var(--color-terracotta);">Ready to take the next step?</span>
           <h3>Looking for support in your current season?</h3>
           <p>
-            Coaching is a space to grapple with decisions, beliefs, and habits in an impactful way. If you are navigating a transition and want personalized support, let's connect.
+            Coaching is a space to explore what is meaningful for you and step forward with purpose. If you are navigating a transition and want personalized support, let's connect.
           </p>
         </div>
         <div class="blog-banner__action">
@@ -155,83 +100,12 @@ import NewsletterEmbed from '../components/NewsletterEmbed.astro';
     margin: var(--space-md) auto 0;
   }
 
-  /* ===== Blog Grid ===== */
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-    margin-bottom: var(--space-2xl);
-  }
-
-  .blog-card {
-    display: flex;
-    flex-direction: column;
-    padding: var(--space-lg);
+  .newsletter-card {
     background: var(--color-warm-white);
     border: 1px solid var(--color-cream-dark);
-    border-radius: var(--radius-lg);
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-  }
-
-  .blog-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(58, 53, 48, 0.08);
-  }
-
-  .blog-card__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: var(--space-sm);
-    gap: var(--space-xs);
-  }
-
-  .blog-card__tag {
-    font-family: var(--font-sans);
-    font-size: 0.72rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--color-terracotta);
-  }
-
-  .blog-card__badge {
-    font-family: var(--font-sans);
-    font-size: 0.68rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 0.2rem 0.55rem;
-    background: var(--color-cream);
-    color: var(--color-sage-dark);
-    border-radius: var(--radius-full);
-  }
-
-  .blog-card__title {
-    font-size: 1.35rem;
-    line-height: 1.35;
-    margin-bottom: var(--space-sm);
-    color: var(--color-charcoal);
-  }
-
-  .blog-card__excerpt {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: var(--color-text-light);
-    flex-grow: 1;
-    margin-bottom: var(--space-md);
-  }
-
-  .blog-card__footer {
-    padding-top: var(--space-sm);
-    border-top: 1px solid var(--color-cream);
-  }
-
-  .blog-card__status {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 0.95rem;
-    color: var(--color-sage-dark);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: 0 4px 20px rgba(58, 53, 48, 0.05);
   }
 
   /* ===== Encouragement Banner ===== */
@@ -248,6 +122,7 @@ import NewsletterEmbed from '../components/NewsletterEmbed.astro';
 
   .blog-banner__content {
     max-width: 650px;
+    text-align: left;
   }
 
   .blog-banner__content h3 {
@@ -268,14 +143,14 @@ import NewsletterEmbed from '../components/NewsletterEmbed.astro';
 
   /* ===== Responsive ===== */
   @media (max-width: 1024px) {
-    .blog-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
     .blog-banner {
       flex-direction: column;
       text-align: center;
       gap: var(--space-md);
+    }
+
+    .blog-banner__content {
+      text-align: center;
     }
   }
 
@@ -285,8 +160,8 @@ import NewsletterEmbed from '../components/NewsletterEmbed.astro';
       padding-bottom: var(--space-xl);
     }
 
-    .blog-grid {
-      grid-template-columns: 1fr;
+    .newsletter-card {
+      padding: var(--space-md);
     }
 
     .blog-banner {

@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="Free Resources" description="Sign up to receive my free workbook for Undergrad women who desire to move forward with purpose and intention.">
+<BaseLayout title="Free Resources" description="Free coaching tools, workbooks, and guides from Rachel Connell Coaching to help you move forward with purpose and intention.">
   <Header />
 
   <!-- ===== Page Hero ===== -->
@@ -14,64 +14,48 @@ import Footer from '../components/Footer.astro';
       <div class="page-hero__overlay"></div>
     </div>
     <div class="container page-hero__content text-center">
-      <span class="eyebrow animate-in" style="color: var(--color-cream-light);">Free Resources</span>
-      <h1 class="animate-in animate-in--delay-1" style="color: var(--color-warm-white);">Free Workbook</h1>
+      <span class="eyebrow animate-in" style="color: var(--color-cream-light);">Tools & Reflection</span>
+      <h1 class="animate-in animate-in--delay-1" style="color: var(--color-warm-white);">Free Resources</h1>
+      <p class="page-hero__lead animate-in animate-in--delay-2">
+        Practical guides and reflection workbooks designed to help you gain clarity, align with your convictions, and step forward with confidence.
+      </p>
     </div>
   </section>
 
-  <!-- ===== Free Resources Section ===== -->
+  <!-- ===== Resources Gallery Section ===== -->
   <section class="section section--white">
     <div class="container">
-      <div class="resource-grid">
-        <!-- Info Side -->
-        <div class="resource-info" data-animate="slide-left">
-          <h2>Rooted to Flourish</h2>
-          <p class="lead" style="margin-bottom: var(--space-md);">
-            Sign up below to receive my free workbook for Undergrad women who desire to move forward with purpose and intention.
-          </p>
-          <p>
-            It is so easy to drift through life, especially the college years given the excitement, stress and busyness of it all. But anytime we let ourselves drift, we often find ourselves in places we did not intend to go.
-          </p>
-          <p>
-            This workbook takes you through a journey of honest reflection, challenging and encouraging you to take ownership of walking the path God has laid out for you. I hope you enjoy!
-          </p>
-        </div>
+      <div class="resources-intro text-center" data-animate>
+        <span class="eyebrow">Workbooks & Guides</span>
+        <h2>Explore Free <span class="serif-italic">Resources</span></h2>
+        <div class="divider divider--center"></div>
+      </div>
 
-        <!-- Form Side -->
-        <div class="resource-form-wrapper" data-animate="slide-right">
-          <div class="card resource-form-card">
-            <h3 style="margin-bottom: var(--space-md);">Get Your Free Copy</h3>
-            
-            <form class="resource-form" id="resource-form" action="#" method="POST">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="first-name" class="form-label">First Name <span class="required">*</span></label>
-                  <input type="text" id="first-name" name="firstName" class="form-input" required placeholder="Your first name" />
-                </div>
-                <div class="form-group">
-                  <label for="last-name" class="form-label">Last Name <span class="required">*</span></label>
-                  <input type="text" id="last-name" name="lastName" class="form-input" required placeholder="Your last name" />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="email" class="form-label">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" name="email" class="form-input" required placeholder="you@example.com" />
-              </div>
-
-              <button type="submit" class="btn btn--primary form-submit" id="form-submit">
-                <span class="form-submit__text">Download Now</span>
-                <span class="form-submit__loading" style="display:none;">Processing...</span>
-              </button>
-            </form>
-
-            <div class="form-success" id="form-success" style="display:none; text-align: center; padding: var(--space-lg) 0;">
-              <div class="form-success__icon" style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-sage); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-sm); font-size: 1.2rem;">✓</div>
-              <h3 style="color: var(--color-sage-dark);">Success!</h3>
-              <p>Your download should start automatically. If it doesn't, <a href="/downloads/rooted-to-flourish-workbook.pdf" download="rooted-to-flourish-workbook.pdf" style="color: var(--color-terracotta); text-decoration: underline;">click here</a> to download.</p>
+      <div class="resources-grid">
+        <!-- Rooted to Flourish Workbook Card -->
+        <a href="/free-resources/rooted-to-flourish" class="resource-card card" data-animate>
+          <div class="resource-card__image-wrap">
+            <img 
+              src="/images/rooted-to-flourish-workbook-cover.jpg" 
+              alt="Rooted to Flourish: A reflection workbook for undergraduate women"
+              class="resource-card__image"
+            />
+            <div class="resource-card__overlay">
+              <span class="btn btn--white btn--sm">View & Download</span>
             </div>
           </div>
-        </div>
+          <div class="resource-card__body">
+            <span class="resource-card__badge">Free Workbook</span>
+            <h3 class="resource-card__title">Rooted to Flourish</h3>
+            <p class="resource-card__subtitle">A reflection workbook for undergraduate women</p>
+            <p class="resource-card__desc">
+              A journey of honest reflection, challenging and encouraging you to take ownership of walking the path God has laid out for you.
+            </p>
+            <div class="resource-card__link">
+              <span>Access Workbook →</span>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -79,74 +63,14 @@ import Footer from '../components/Footer.astro';
   <Footer />
 </BaseLayout>
 
-<script>
-  const form = document.getElementById('resource-form');
-  const success = document.getElementById('form-success');
-  const submitBtn = document.getElementById('form-submit');
-
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // Show loading state
-      const textEl = submitBtn?.querySelector('.form-submit__text');
-      const loadingEl = submitBtn?.querySelector('.form-submit__loading');
-      if (textEl) textEl.style.display = 'none';
-      if (loadingEl) loadingEl.style.display = 'inline';
-
-      const formData = new FormData(form);
-      
-      // Web3Forms Configuration
-      formData.append("access_key", "4a86b495-300e-453c-94ae-1c65bf932828");
-      
-      const name = formData.get("firstName") || "Someone";
-      formData.append("subject", `New Workbook Download from ${name}`);
-      formData.append("from_name", "Rachel Connell Coaching Website");
-
-      try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-          // Hide form and show success message
-          form.style.display = 'none';
-          if (success) success.style.display = 'block';
-
-          // Trigger automatic download
-          const link = document.createElement('a');
-          link.href = '/downloads/rooted-to-flourish-workbook.pdf';
-          link.download = 'rooted-to-flourish-workbook.pdf';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-
-        } else {
-          alert("Oops! Something went wrong. Please try emailing directly at rachel@rachelconnellcoaching.com");
-        }
-      } catch (error) {
-        console.error("Error submitting form:", error);
-        alert("Oops! Something went wrong. Please try emailing directly at rachel@rachelconnellcoaching.com");
-      } finally {
-        if (textEl) textEl.style.display = 'inline';
-        if (loadingEl) loadingEl.style.display = 'none';
-      }
-    });
-  }
-</script>
-
 <style>
   /* ===== Page Hero ===== */
   .page-hero {
     position: relative;
-    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-xl);
+    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    padding-bottom: var(--space-2xl);
+    background: var(--color-charcoal);
     overflow: hidden;
-    min-height: 280px;
-    display: flex;
-    align-items: flex-end;
   }
 
   .page-hero__bg {
@@ -158,93 +82,153 @@ import Footer from '../components/Footer.astro';
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.25;
   }
 
   .page-hero__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(142, 85, 48, 0.85), rgba(107, 125, 94, 0.8));
+    background: linear-gradient(180deg, rgba(58, 53, 48, 0.7) 0%, rgba(58, 53, 48, 0.9) 100%);
   }
 
   .page-hero__content {
     position: relative;
     z-index: 1;
+    max-width: 780px;
   }
 
-  /* ===== Resource Grid ===== */
-  .resource-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .page-hero__lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: rgba(255, 253, 249, 0.85);
+    margin: var(--space-md) auto 0;
+  }
+
+  /* ===== Resources Gallery ===== */
+  .resources-intro {
+    max-width: 600px;
+    margin: 0 auto var(--space-2xl);
+  }
+
+  .resources-grid {
+    display: flex;
+    justify-content: center;
     gap: var(--space-xl);
-    align-items: center;
+    flex-wrap: wrap;
   }
 
-  .resource-form-card {
-    padding: var(--space-xl);
-  }
-
-  /* ===== Form Styles ===== */
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-md);
-  }
-
-  .form-group {
-    margin-bottom: var(--space-md);
-  }
-
-  .form-label {
-    display: block;
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 400;
-    color: var(--color-text);
-    margin-bottom: 0.4rem;
-    letter-spacing: 0.03em;
-  }
-
-  .required {
-    color: var(--color-terracotta);
-  }
-
-  .form-input {
-    width: 100%;
-    padding: 0.85rem 1rem;
-    border: 1.5px solid var(--color-cream-dark);
-    border-radius: var(--radius-md);
+  .resource-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
     background: var(--color-warm-white);
-    color: var(--color-text);
+    border: 1px solid var(--color-cream-dark);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .resource-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(58, 53, 48, 0.12);
+  }
+
+  .resource-card__image-wrap {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-lg);
+  }
+
+  .resource-card__image {
+    width: 220px;
+    height: auto;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    transition: transform var(--transition-base);
+  }
+
+  .resource-card:hover .resource-card__image {
+    transform: scale(1.03);
+  }
+
+  .resource-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(58, 53, 48, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+  }
+
+  .resource-card:hover .resource-card__overlay {
+    opacity: 1;
+  }
+
+  .resource-card__body {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .resource-card__badge {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-terracotta);
+    margin-bottom: var(--space-xs);
+  }
+
+  .resource-card__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-charcoal);
+  }
+
+  .resource-card__subtitle {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    color: var(--color-sage-dark);
+    font-weight: 500;
+    margin-bottom: var(--space-sm);
+  }
+
+  .resource-card__desc {
     font-size: 0.95rem;
-    transition: all var(--transition-base);
-    outline: none;
+    line-height: 1.6;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+    flex-grow: 1;
   }
 
-  .form-input:focus {
-    border-color: var(--color-terracotta-light);
-    box-shadow: 0 0 0 3px rgba(176, 106, 59, 0.1);
+  .resource-card__link {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--color-terracotta);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
   }
 
-  .form-input::placeholder {
-    color: var(--color-text-lighter);
+  .resource-card:hover .resource-card__link {
+    color: var(--color-terracotta-dark);
   }
 
-  .form-submit {
-    width: 100%;
-    margin-top: var(--space-sm);
-  }
-
-  /* ===== Responsive ===== */
-  @media (max-width: 900px) {
-    .resource-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .form-row {
-      grid-template-columns: 1fr;
-      gap: 0;
+  @media (max-width: 768px) {
+    .page-hero {
+      padding-top: calc(var(--nav-height) + var(--space-lg));
+      padding-bottom: var(--space-xl);
     }
   }
 </style>
